@@ -1,4 +1,13 @@
 package storge;
+
+import java.util.TreeMap;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
+
 /** ***************************************************
 class GradeSystems  aGradeSystem儲存a tree of anEntry objects with key ID and value aGrade
 
@@ -11,6 +20,23 @@ updateWeights ()
 ********************************************************/
 
 public class GradeSystems {
+	private Double[] weights = {0.1, 0.1, 0.1, 0.3, 0.4};
+	private TreeMap <String, Grades> aTree;
+	Scanner scanner;
+	
+	public GradeSystems() {
+		scanner = new Scanner(System.in);
+		try {
+			Scanner input = new Scanner(new InputStreamReader(
+					new FileInputStream(new File("gradeInput.txt")), "UTF8"));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	/*-------------------------------------------------------------------------------------------------------------
 	containID(ID)  看aGradeSystem是否含此ID
 
