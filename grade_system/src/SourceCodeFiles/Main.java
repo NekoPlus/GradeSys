@@ -1,4 +1,4 @@
-package storge;
+package SourceCodeFiles;
 
 /* ##################################################################
 A grade system 讓使用者取得他的總成績(total grade)及排名(rank)，

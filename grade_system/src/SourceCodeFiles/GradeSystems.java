@@ -1,4 +1,4 @@
-package storge;
+package SourceCodeFiles;
 
 import java.util.TreeMap;
 import java.io.File;
@@ -21,7 +21,7 @@ updateWeights ()
 
 public class GradeSystems {
 	private Double[] weights = {0.1, 0.1, 0.1, 0.3, 0.4};
-	private TreeMap <String, Grades> aTree;
+	public TreeMap <String, Grades> aTree;
 	Scanner scanner;
 	
 	public GradeSystems() {

@@ -1,4 +1,4 @@
-package storge;
+package SourceCodeFiles;
 
 /** **********************************************************************
 class Grades  aGrade儲存name, lab1, lab2, lab3, midtermExam, finalExam, totalGrade
@@ -20,3 +20,8 @@ public class Grades {
 		return aTotalGrade;
 	}
 }
+/*-------------------------------------------------------------------------------------------------------------
+public Grades () { } 
+public calculateTotalGrade(weights)  注意: totalGrade須四捨五入
+end class Grades
+-----------------------------------------------------------------------------------------------------------------*/
