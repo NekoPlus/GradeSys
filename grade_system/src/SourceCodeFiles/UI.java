@@ -47,7 +47,7 @@ public class UI {
 	int showWelcomeMsg(String name){
 		return 0;
 	}
-	UI(){
+	public UI(){
 		
 	}
 
