@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class Test_Grades {
+public class Test_showFinishMsg {
 
 	@Test
 	public void test() {

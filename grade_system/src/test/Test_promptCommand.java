@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class Test_UI {
+public class Test_promptCommand {
 
 	@Test
 	public void test() {
