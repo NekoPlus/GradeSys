@@ -16,20 +16,23 @@ public class Test_checkID {
 	@Test (expected = IDExceptions1.class)
 	public void testCheckID1() throws IDExceptions1, IDExceptions2{
 		//aUI calls checkID(96z001044);
-		boolean b=checkID("96z001044");
+		UI c = new UI();
+		boolean b=c.checkID("96z001044");
 		assertEquals (b, false);
 	}
 	
 	@Test (expected = IDExceptions2.class)
 	public void testCheckID2() throws IDExceptions1, IDExceptions2{
 		//aUI calls checkID(96200104);
-		boolean b=checkID("96200104");
+		UI c = new UI();
+		boolean b=c.checkID("96200104");
 		assertEquals (b, false);
 	}
 	
 	@Test
 	public void testCheckID3() throws IDExceptions1, IDExceptions2{
-		boolean b=checkID("962001044");
+		UI c = new UI();
+		boolean b=c.checkID("962001044");
 		assertEquals (b, true);
 	}
 

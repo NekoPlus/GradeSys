@@ -68,6 +68,7 @@ public class UI {
 	int showWelcomeMsg(String name){
 		return 0;
 	}
+<<<<<<< HEAD
 	
 	/*-----------------------------------------------------------------------------------------------------------
 	1.calls UI() «Øºc aUI
@@ -135,6 +136,10 @@ public class UI {
 		}finally {
 			
 		}
+=======
+	public UI(){
+		
+>>>>>>> da225d7ec63aa9556c889d133da22e11d308eacb
 	}
 	
 }
