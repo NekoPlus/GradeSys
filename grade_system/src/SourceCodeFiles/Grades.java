@@ -11,12 +11,20 @@ public class Grades {
 	public String name;
 	public int lab1, lab2, lab3;
 	public int midtermExam, finalExam;
-	public int totalGrade;
-	
+	public float totalGrade;
+	public Grades (String aname,int alab1,int alab2,int alab3,int amidtermExam,int afinalExam) { 
+		name = aname;
+		lab1 = alab1;
+		lab2 = alab2;
+		lab3 = alab3;
+		midtermExam = amidtermExam;
+		finalExam = afinalExam;
+	}
 	public int calculateTotalGrade(float[] weights) {
 		int aTotalGrade = Math.round(lab1 * weights[0] + lab2 * weights[1]
 				+ lab3 * weights[2] + midtermExam * weights[3] + finalExam
 				* weights[4]);
+		totalGrade = aTotalGrade;
 		return aTotalGrade;
 	}
 }

@@ -15,7 +15,6 @@ public  testGradeSystrems2()
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-
 import SourceCodeFiles.*;
 
 public class Test_GradeSystems {
