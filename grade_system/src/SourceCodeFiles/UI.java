@@ -32,6 +32,8 @@ public class UI {
 //			return false;
 //		}catch(IDExceptions2 e) {
 //			return false;
+//		}catch(IDExceptions3 e) {
+//			return false;
 //		}
 		return result;
 	}

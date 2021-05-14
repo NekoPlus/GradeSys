@@ -9,26 +9,28 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import SourceCodeFiles.GradeSystems;
 import SourceCodeFiles.IDExceptions1;
 import SourceCodeFiles.IDExceptions2;
 
 public class Test_containID {
 
+	GradeSystems aGradeSystem = new GradeSystems(); 
 	@Test
 	public void testCheckID1(){
-		boolean b=containID("962001044");
+		boolean b=aGradeSystem.containID("962001044");
 		assertEquals (b, true);
 	}
 	
 	@Test
 	public void testCheckID2(){
-		boolean b=containID("955002056");
+		boolean b=aGradeSystem.containID("955002056");
 		assertEquals (b, true);
 	}
 	
 	@Test
 	public void testCheckID3(){
-		boolean b=containID("800000001");
+		boolean b=aGradeSystem.containID("800000001");
 		assertEquals (b, false);
 	}
 }

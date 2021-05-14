@@ -16,6 +16,7 @@ public class Main {
 	public static void main(String[] args) {
 		//try{
 			new UI();
+			
 		//}
 //		catch (IDExceptions1 e1) {
 //			System.out.println("³oID§t¦r¥À ¿ù¤F!");

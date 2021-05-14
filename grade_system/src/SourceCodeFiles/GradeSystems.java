@@ -27,11 +27,10 @@ public class GradeSystems {
 	public GradeSystems() {
 		
 		try {
-			File file = new File("C:\\Users\\eric1\\OneDrive\\桌面\\作業\\敏捷方法\\GradeSys\\grade_system\\src\\SourceCodeFiles\\gradeInput.txt");
-			//scanner = new Scanner(file, "utf-8");
+			File file = new File("grade_system/src/SourceCodeFiles/gradeInput.txt");
+			scanner = new Scanner(file, "utf-8");
 			scanner = new Scanner(new InputStreamReader(
-					new FileInputStream(file), "UTF8"));
-			
+					new FileInputStream(file)));
 			while(scanner.hasNext()) {
 				
 				String id_input=scanner.next();

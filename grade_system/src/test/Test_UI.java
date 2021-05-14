@@ -9,7 +9,7 @@ import org.junit.Test;
 public class Test_UI {
 	UI aUI = new UI();
 	@Test
-	public void testGradeSystrems1() {
+	public void test() {
 		assertNotNull(aUI);
 	}
 }

@@ -8,15 +8,28 @@ test case 2: assert §õ«Â§Ê rank equals 1
 ***************************************************************************/
 
 import static org.junit.Assert.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import SourceCodeFiles.*;
 
 import org.junit.Test;
 
 public class Test_showRank {
 
+	GradeSystems aGradeSystem = new GradeSystems(); 
 	@Test
-	public void testGradeSystrems1() {
-		assertEquals (2, showRank("962001044"));
+	public void Test_showRank() {
+		 
+		 assertEquals (true, aGradeSystem.showRank("962001044"));
 	}
+	@Test
+	public void Test_showRank2() {
+		 ByteArrayOutputStream stream = new ByteArrayOutputStream();
+		 PrintStream printstream= new PrintStream(stream);
+		 System.setOut(printstream);
+		 assertEquals("2",stream.toString());
 
+	}
 }
