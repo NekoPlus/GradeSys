@@ -23,18 +23,31 @@ public class UI {
 	         IDExceptions2  print “這ID長度不對 錯了!”
 	returns  boolean
 	-------------------------------------------------------------------------------------------------------------- */
-	boolean checkID(String ID) {
-		boolean result;
-		//try{
-			result=aGradeSystem.containID(ID);
-			
-//		}catch(IDExceptions1 e) {
-//			return false;
-//		}catch(IDExceptions2 e) {
-//			return false;
-//		}catch(IDExceptions3 e) {
-//			return false;
-//		}
+	boolean checkID(String ID) throws IDExceptions1,IDExceptions2,IDExceptions3 {
+		boolean result=true;
+		
+		/*
+		 * 這ID含字母 錯了
+		 */
+		for(int i=0;i<ID.length();i++) {
+			if(Character.isLetter(ID.charAt(i))) {
+				throw new IDExceptions1();
+			}
+		}
+		/*
+		 * 這ID長度不對 錯了
+		 */
+		if(ID.length()!=9) {
+			throw new IDExceptions2();
+		}
+		/*
+		 * 無這ID 錯了
+		 */
+		if(!aGradeSystem.containID(ID)) {
+			throw new IDExceptions3();
+		}
+		
+		
 		return result;
 	}
 	
