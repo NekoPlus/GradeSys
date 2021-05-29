@@ -69,11 +69,7 @@ public class UI {
 	returns  ID  
 	----------------------------------------------------------------------------------------------------------------*/
 	public String promptID(){
-<<<<<<< HEAD
-		System.out.println("輸入ID或 Q (結束使用)?");
-=======
 		System.out.print("輸入ID或 Q (結束使用)?");
->>>>>>> 449d1d834729c659344d7b580fb8336bcb68f73b
 		return input.next();
 	}
 	
