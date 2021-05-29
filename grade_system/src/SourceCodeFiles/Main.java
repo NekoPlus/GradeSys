@@ -14,19 +14,19 @@ A grade system 讓使用者取得他的總成績(total grade)及排名(rank)，
 public class Main {
 
 	public static void main(String[] args) {
-		//try{
-			new UI();
+		try{
+			UI ui = new UI();
 			
-		//}
-//		catch (IDExceptions1 e1) {
-//			System.out.println("這ID含字母 錯了!");
-//        }
-//		catch (IDExceptions2 e2) {
-//			System.out.println("這ID長度不對 錯了!");
-//		}
-//		catch (IDExceptions3 e3) {
-//			System.out.println ("無這ID 錯了!");
-//		}
+		}
+		catch (IDExceptions1 e1) {
+			System.out.println("這ID含字母 錯了!");
+        }
+		catch (IDExceptions2 e2) {
+			System.out.println("這ID長度不對 錯了!");
+		}
+		catch (IDExceptions3 e3) {
+			System.out.println ("無這ID 錯了!");
+		}
 
 		/*------------------------------------------------------------------------------------------------------
 		main()

@@ -96,7 +96,7 @@ public class UI {
 	
 	4. aUI calls showFinishMsg()  µ²§ô¤F
 	----------------------------------------------------------------------------------------------------------------*/
-	public UI(){
+	public UI() throws IDExceptions1,IDExceptions2,IDExceptions3{
 		aGradeSystem = new GradeSystems();
 		try {
 			
