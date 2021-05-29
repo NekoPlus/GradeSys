@@ -60,11 +60,7 @@ public class UI {
 	returns  command  G (Grade), R (Rank), W (Weights), or E (Exit)
 	-----------------------------------------------------------------------------------------------------------------*/
 	String promptCommand(){
-		System.out.println("輸入指令");
-		System.out.println("1) G 顯示成績 (Grade)");
-		System.out.println("2) R 顯示排名 (Rank)");
-		System.out.println("3) W 更新配分 (Weight)");
-		System.out.println("4) E 離開選單 (Exit)");
+		System.out.println("輸入指令\n1) G 顯示成績 (Grade)\n2) R 顯示排名 (Rank)\n3) W 更新配分 (Weight)\n4) E 離開選單 (Exit)");
 		return input.next();
 	}
 	
@@ -72,7 +68,7 @@ public class UI {
 	promptID()  詢問ID
 	returns  ID  
 	----------------------------------------------------------------------------------------------------------------*/
-	String promptID(){
+	public String promptID(){
 		System.out.println("輸入ID或 Q (結束使用)?");
 		return input.next();
 	}
