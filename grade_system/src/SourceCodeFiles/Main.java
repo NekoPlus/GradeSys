@@ -15,8 +15,47 @@ public class Main {
 
 	public static void main(String[] args) {
 		try{
-			UI ui = new UI();
-			
+			UI aUI = new UI();
+			GradeSystems aGradeSystem = new GradeSystems();
+			try {
+				
+				while(true){
+					String ID = aUI.promptID();
+					if (ID.equals("Q")) {
+						break;
+					}
+					if(!aUI.checkID(ID,aGradeSystem)) {
+						continue;
+					}
+					aUI.showWelcomeMsg(aGradeSystem.getName(ID));
+					while (true) {
+						boolean exit = false;
+						String command ;
+						command = aUI.promptCommand();
+						switch (command) {
+						case "G":
+							aGradeSystem.showGrade(ID);
+							break;
+						case "R":
+							aGradeSystem.showRank(ID);
+							break;
+						case "W":
+							aGradeSystem.updateWeights();
+							break;
+						case "E":
+							exit = true;
+							break;
+						}
+						if (exit) {
+							aUI.showFinishMsg();
+							break;
+						}
+							
+					}
+				}
+			}finally {
+				
+			}
 		}
 		catch (IDExceptions1 e1) {
 			System.out.println("³oID§t¦r¥À ¿ù¤F!");

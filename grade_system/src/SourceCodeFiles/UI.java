@@ -15,7 +15,7 @@ UI()  建構 aUI
 
 public class UI {
 	private Scanner input = new Scanner(System.in);
-	GradeSystems aGradeSystem;
+	
 	/*----------------------------------------------------------------------------------------------------------
 	checkID(ID) throws IDExceptions1, IDExceptions2
 
@@ -23,7 +23,7 @@ public class UI {
 	         IDExceptions2  print “這ID長度不對 錯了!”
 	returns  boolean
 	-------------------------------------------------------------------------------------------------------------- */
-	public boolean checkID(String ID) throws IDExceptions1,IDExceptions2,IDExceptions3 {
+	public boolean checkID(String ID,GradeSystems aGradeSystem) throws IDExceptions1,IDExceptions2,IDExceptions3 {
 		boolean result=true;
 		
 		/*
@@ -69,7 +69,11 @@ public class UI {
 	returns  ID  
 	----------------------------------------------------------------------------------------------------------------*/
 	public String promptID(){
+<<<<<<< HEAD
 		System.out.println("輸入ID或 Q (結束使用)?");
+=======
+		System.out.print("輸入ID或 Q (結束使用)?");
+>>>>>>> 449d1d834729c659344d7b580fb8336bcb68f73b
 		return input.next();
 	}
 	
@@ -108,47 +112,8 @@ public class UI {
 	
 	4. aUI calls showFinishMsg()  結束了
 	----------------------------------------------------------------------------------------------------------------*/
-	public UI() throws IDExceptions1,IDExceptions2,IDExceptions3{
-		aGradeSystem = new GradeSystems();
-		try {
-			
-			while(true){
-				String ID = promptID();
-				if (ID.equals("Q")) {
-					break;
-				}
-				if(!checkID(ID)) {
-					continue;
-				}
-				showWelcomeMsg(aGradeSystem.getName(ID));
-				while (true) {
-					boolean exit = false;
-					String command ;
-					command = promptCommand();
-					switch (command) {
-					case "G":
-						aGradeSystem.showGrade(ID);
-						break;
-					case "R":
-						aGradeSystem.showRank(ID);
-						break;
-					case "W":
-						aGradeSystem.updateWeights();
-						break;
-					case "E":
-						exit = true;
-						break;
-					}
-					if (exit) {
-						showFinishMsg();
-						break;
-					}
-						
-				}
-			}
-		}finally {
-			
-		}
+	public UI() {
+		
 	
 		
 	}
