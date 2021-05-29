@@ -59,8 +59,9 @@ public class UI {
 
 	returns  command  G (Grade), R (Rank), W (Weights), or E (Exit)
 	-----------------------------------------------------------------------------------------------------------------*/
-	String promptCommand(){
-		System.out.println("輸入指令\n1) G 顯示成績 (Grade)\n2) R 顯示排名 (Rank)\n3) W 更新配分 (Weight)\n4) E 離開選單 (Exit)");
+	public String promptCommand(){
+		System.out.print("輸入指令\n1) G 顯示成績 (Grade)\n2) R 顯示排名 (Rank)\n3) W 更新配分 (Weight)\n4) E 離開選單 (Exit)");
+		//System.out.print("test");
 		return input.next();
 	}
 	
