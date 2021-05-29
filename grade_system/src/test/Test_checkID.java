@@ -12,22 +12,16 @@ import java.io.ByteArrayInputStream;
 
 import SourceCodeFiles.*;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class Test_checkID {
 
 	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		ByteArrayInputStream in = new ByteArrayInputStream("Q".getBytes());
-		System.setIn(in);
-	}
-	
-	
 	@Test (expected = IDExceptions1.class)
 	public void testCheckID1() throws IDExceptions1, IDExceptions2, IDExceptions3{
 		//aUI calls checkID(96z001044);
+		ByteArrayInputStream in = new ByteArrayInputStream("Q".getBytes());
+		System.setIn(in);
 		UI c = new UI();
 		boolean b=c.checkID("96z001044");
 		assertEquals (b, false);
@@ -36,6 +30,8 @@ public class Test_checkID {
 	@Test (expected = IDExceptions2.class)
 	public void testCheckID2() throws IDExceptions1, IDExceptions2, IDExceptions3{
 		//aUI calls checkID(96200104);
+		ByteArrayInputStream in = new ByteArrayInputStream("Q".getBytes());
+		System.setIn(in);
 		UI c = new UI();
 		boolean b=c.checkID("96200104");
 		assertEquals (b, false);
@@ -43,6 +39,8 @@ public class Test_checkID {
 	
 	@Test
 	public void testCheckID3() throws IDExceptions1, IDExceptions2, IDExceptions3{
+		ByteArrayInputStream in = new ByteArrayInputStream("Q".getBytes());
+		System.setIn(in);
 		UI c = new UI();
 		boolean b=c.checkID("962001044");
 		assertEquals (b, true);
