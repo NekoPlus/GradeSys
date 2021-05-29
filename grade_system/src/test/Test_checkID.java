@@ -20,8 +20,7 @@ public class Test_checkID {
 	@Test (expected = IDExceptions1.class)
 	public void testCheckID1() throws IDExceptions1, IDExceptions2, IDExceptions3{
 		//aUI calls checkID(96z001044);
-		ByteArrayInputStream in = new ByteArrayInputStream("Q".getBytes());
-		System.setIn(in);
+		
 		UI c = new UI();
 		boolean b=c.checkID("96z001044");
 		assertEquals (b, false);
