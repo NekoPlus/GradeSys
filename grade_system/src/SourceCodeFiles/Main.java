@@ -24,7 +24,7 @@ public class Main {
 					if (ID.equals("Q")) {
 						break;
 					}
-					if(!aUI.checkID(ID,aGradeSystem)) {
+					if(!aUI.checkID(ID)) {
 						continue;
 					}
 					aUI.showWelcomeMsg(aGradeSystem.getName(ID));
