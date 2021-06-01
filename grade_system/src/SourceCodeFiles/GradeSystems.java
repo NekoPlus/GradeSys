@@ -105,8 +105,9 @@ public class GradeSystems {
 				"mid-term\t" + weights[3] + "%\n" +
 				"fianl exam\t" + weights[4] + "%\n";
 		System.out.print(str);
-		
+		//print 請確認舊配分
 		System.out.print("輸入新配分\nlab1\t");
+		//print 請確認新配分
 		newWeight[0] = Integer.parseInt(scanner.nextLine());
 		System.out.print("lab2\t");
 		newWeight[1] = Integer.parseInt(scanner.nextLine());
@@ -140,10 +141,8 @@ public class GradeSystems {
 			else {
 				System.out.println("配分比例合計需要100%, 請檢查");
 			}
-		} 
-		for (int i = 0; i<5; i++) {  
-			weights[i] = newWeight[i] / 100.0f;
 		}
+		
 		Iterator<String> anEntry = aTree.keySet().iterator(); 
 		while (anEntry.hasNext()) {  
 			aTree.get(anEntry.next()).calculateTotalGrade(weights);
