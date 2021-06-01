@@ -88,7 +88,7 @@ public class GradeSystems {
 				rank++;
 			}
 		}
-		System.out.print(aTree.get(ID).name + "排名第" + rank.toString());
+		System.out.print(aTree.get(ID).name + "排名第" + rank.toString()+"\n");
 		return true;
 	}
 	
