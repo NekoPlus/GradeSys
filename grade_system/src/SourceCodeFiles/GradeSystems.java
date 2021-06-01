@@ -88,7 +88,7 @@ public class GradeSystems {
 				rank++;
 			}
 		}
-		System.out.println(aTree.get(ID).name + "排名第" + rank.toString());
+		System.out.print(aTree.get(ID).name + "排名第" + rank.toString());
 		return true;
 	}
 	
@@ -99,7 +99,7 @@ public class GradeSystems {
 	public boolean updateWeights() {
 		scanner = new Scanner(System.in);
 		float newWeight[] = {0, 0, 0, 0, 0};
-		String str = "請確認新配分\n" + "lab1\t" + weights[0] + "%\n" + 
+		String str = "舊配分\n" + "lab1\t" + weights[0] + "%\n" + 
 				"lab2\t" + weights[1] + "%\n" +
 				"lab3\t" + weights[2] + "%\n" +
 				"mid-term\t" + weights[3] + "%\n" +

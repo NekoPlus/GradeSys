@@ -80,6 +80,7 @@ public class UI {
 	public void showFinishMsg() {
 		System.out.print("µ²§ô¤F\n");
 	}
+	
 	int showWelcomeMsg(String name){
 		return 0;
 	}
