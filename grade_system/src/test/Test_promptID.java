@@ -26,7 +26,7 @@ public class Test_promptID {
 		UI aUI = new UI();
 		String userInput = aUI.promptID();  
 		/*預期promptID會顯示"輸入ID或 Q (結束使用)？" */
-		assertEquals("輸入ID或 Q (結束使用)?", outContent.toString());
+		assertEquals("輸入ID或 Q (結束使用)?\n", outContent.toString());
 		/*預期user input 是 Q */ 
 		assertEquals ("Q", userInput.toString());
 
@@ -46,7 +46,7 @@ public class Test_promptID {
 		UI aUI = new UI();
 		String userInput = aUI.promptID();  
 		/*預期promptID會顯示"輸入ID或 Q (結束使用)？" */
-		assertEquals("輸入ID或 Q (結束使用)?", outContent.toString());
+		assertEquals("輸入ID或 Q (結束使用)?\n", outContent.toString());
 		/*預期user input 是 Q */ 
 		assertEquals ("962001044", userInput.toString());
 
