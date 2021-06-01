@@ -97,28 +97,10 @@ public class GradeSystems {
 	returns  boolean
 	----------------------------------------------------------------------------------------------------------------------------*/
 	public boolean updateWeights() {
+		showOldWeights();
 		scanner = new Scanner(System.in);
-		float newWeight[] = {0, 0, 0, 0, 0};
-		String str = "請確認舊配分\n" + "lab1\t" + (int)(weights[0]*100) + "%\n" + 
-				"lab2\t" + (int)(weights[1]*100) + "%\n" +
-				"lab3\t" + (int)(weights[2]*100) + "%\n" +
-				"mid-term\t" + (int)(weights[3]*100) + "%\n" +
-				"fianl exam\t" + (int)(weights[4]*100) + "%\n";
-		System.out.print(str);
-		//print 請確認舊配分
-		System.out.print("輸入新配分\nlab1\t");
-		//print 請確認新配分
-		newWeight[0] = Integer.parseInt(scanner.next());
-		System.out.print("lab2\t");
-		newWeight[1] = Integer.parseInt(scanner.next());
-		System.out.print("lab3\t");
-		newWeight[2] = Integer.parseInt(scanner.next());
-		System.out.print("mid-term\t");
-		newWeight[3] = Integer.parseInt(scanner.next());
-		System.out.print("final exam\t");
-		newWeight[4] = Integer.parseInt(scanner.next());
-		
-		str = "請確認新配分\n" + "lab1\t" + newWeight[0] + "%\n" + 
+		Integer newWeight[] = getNewWeights(scanner);;
+		String str = "請確認新配分\n" + "lab1\t" + newWeight[0] + "%\n" + 
 				"lab2\t" + newWeight[1] + "%\n" +
 				"lab3\t" + newWeight[2] + "%\n" +
 				"mid-term\t" + newWeight[3] + "%\n" +
@@ -129,24 +111,51 @@ public class GradeSystems {
 		String comString = scanner.next();
 		
 		if (comString.equals("Y")) {
-			int all = 0;
-			for (float w : newWeight) {
-				all += w;
-			}
-			if (all == 100) {
-				for (int i=0; i<5; i++) {
-					weights[i] = newWeight[i] / 100.0f;
-				}
-			}else {
-				System.out.print("配分比例合計需要100%, 請檢查\n");
-			}
+			setWeights(newWeight);
 		}
-		
 		Iterator<String> anEntry = aTree.keySet().iterator(); 
 		while (anEntry.hasNext()) {  
 			aTree.get(anEntry.next()).calculateTotalGrade(weights);
 		}
 		return true;
+	}
+	
+	void showOldWeights() {
+		String str = "請確認舊配分\n" + "lab1\t" + (int)(weights[0]*100) + "%\n" + 
+				"lab2\t" + (int)(weights[1]*100) + "%\n" +
+				"lab3\t" + (int)(weights[2]*100) + "%\n" +
+				"mid-term\t" + (int)(weights[3]*100) + "%\n" +
+				"fianl exam\t" + (int)(weights[4]*100) + "%\n";
+		System.out.print(str);
+	}
+	
+	Integer[] getNewWeights(Scanner sc) {
+			Integer newWeight[] = {0, 0, 0, 0, 0};
+			System.out.print("輸入新配分\nlab1\t");
+			newWeight[0] = Integer.parseInt(sc.nextLine());
+			System.out.print("lab2\t");
+			newWeight[1] = Integer.parseInt(sc.nextLine());
+			System.out.print("lab3\t");
+			newWeight[2] = Integer.parseInt(sc.nextLine());
+			System.out.print("mid-term\t");
+			newWeight[3] = Integer.parseInt(sc.nextLine());
+			System.out.print("final exam\t");
+			newWeight[4] = Integer.parseInt(sc.nextLine());
+			return newWeight;
+	}
+	
+	void setWeights(Integer[] newWeight) {
+		int all = 0;
+		for (float w : newWeight) {
+			all += w;
+		}
+		if (all == 100) {
+			for (int i=0; i<5; i++) {
+				weights[i] = newWeight[i] / 100.0f;
+			}
+		}else {
+			System.out.print("配分比例合計需要100%, 請檢查\n");
+		}
 	}
 	
 	/* getName(ID) 學生自行補上 */
