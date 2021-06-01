@@ -132,15 +132,15 @@ public class GradeSystems {
 	Integer[] getNewWeights(Scanner sc) {
 			Integer newWeight[] = {0, 0, 0, 0, 0};
 			System.out.print("輸入新配分\nlab1\t");
-			newWeight[0] = Integer.parseInt(sc.nextLine());
+			newWeight[0] = Integer.parseInt(sc.next());
 			System.out.print("lab2\t");
-			newWeight[1] = Integer.parseInt(sc.nextLine());
+			newWeight[1] = Integer.parseInt(sc.next());
 			System.out.print("lab3\t");
-			newWeight[2] = Integer.parseInt(sc.nextLine());
+			newWeight[2] = Integer.parseInt(sc.next());
 			System.out.print("mid-term\t");
-			newWeight[3] = Integer.parseInt(sc.nextLine());
+			newWeight[3] = Integer.parseInt(sc.next());
 			System.out.print("final exam\t");
-			newWeight[4] = Integer.parseInt(sc.nextLine());
+			newWeight[4] = Integer.parseInt(sc.next());
 			return newWeight;
 	}
 	
