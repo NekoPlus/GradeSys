@@ -25,8 +25,6 @@ public class Test_showWelcomeMsg {
 		/*預期howWelcomeMsg會顯示"Welcome 凌宗廷" */
 		assertEquals("Welcome 凌宗廷\n", outContent.toString());
 		
-		
-		
 	}
 
 }
