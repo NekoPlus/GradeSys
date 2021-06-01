@@ -68,7 +68,7 @@ public class GradeSystems {
 	----------------------------------------------------------------------------------------------------------------------------*/
 	public boolean showGrade(String ID) {
 		if(containID(ID)) {
-			System.out.println(aTree.get(ID).name+" "+aTree.get(ID).lab1+" "+aTree.get(ID).lab2+" "+aTree.get(ID).lab3+" "+aTree.get(ID).midtermExam+" "+aTree.get(ID).finalExam);
+			System.out.print(aTree.get(ID).name+" "+aTree.get(ID).lab1+" "+aTree.get(ID).lab2+" "+aTree.get(ID).lab3+" "+aTree.get(ID).midtermExam+" "+aTree.get(ID).finalExam+'\n');
 			return true;
 		}else {
 			return false;

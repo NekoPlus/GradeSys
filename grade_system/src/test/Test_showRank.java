@@ -20,8 +20,7 @@ public class Test_showRank {
 
 	GradeSystems aGradeSystem = new GradeSystems(); 
 	@Test
-	public void Test_showRank1() {
-		 
+	public void Test_showRank() {
 		 assertEquals (true, aGradeSystem.showRank("962001044"));
 	}
 	@Test
