@@ -61,6 +61,7 @@ public class UI {
 	-----------------------------------------------------------------------------------------------------------------*/
 	public String promptCommand(){
 		System.out.print("輸入指令\n1) G 顯示成績 (Grade)\n2) R 顯示排名 (Rank)\n3) W 更新配分 (Weight)\n4) E 離開選單 (Exit)");
+
 		return input.next();
 	}
 	
