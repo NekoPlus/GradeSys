@@ -99,23 +99,24 @@ public class GradeSystems {
 	public boolean updateWeights() {
 		scanner = new Scanner(System.in);
 		float newWeight[] = {0, 0, 0, 0, 0};
-		String str = "舊配分\n" + "lab1\t" + weights[0] + "%\n" + 
-				"lab2\t" + weights[1] + "%\n" +
-				"lab3\t" + weights[2] + "%\n" +
-				"mid-term\t" + weights[3] + "%\n" +
-				"fianl exam\t" + weights[4] + "%\n";
+		String str = "請確認舊配分\n" + "lab1\t" + (int)(weights[0]*100) + "%\n" + 
+				"lab2\t" + (int)(weights[1]*100) + "%\n" +
+				"lab3\t" + (int)(weights[2]*100) + "%\n" +
+				"mid-term\t" + (int)(weights[3]*100) + "%\n" +
+				"fianl exam\t" + (int)(weights[4]*100) + "%\n";
 		System.out.print(str);
-		
+		//print 請確認舊配分
 		System.out.print("輸入新配分\nlab1\t");
-		newWeight[0] = Integer.parseInt(scanner.nextLine());
+		//print 請確認新配分
+		newWeight[0] = Integer.parseInt(scanner.next());
 		System.out.print("lab2\t");
-		newWeight[1] = Integer.parseInt(scanner.nextLine());
+		newWeight[1] = Integer.parseInt(scanner.next());
 		System.out.print("lab3\t");
-		newWeight[2] = Integer.parseInt(scanner.nextLine());
+		newWeight[2] = Integer.parseInt(scanner.next());
 		System.out.print("mid-term\t");
-		newWeight[3] = Integer.parseInt(scanner.nextLine());
+		newWeight[3] = Integer.parseInt(scanner.next());
 		System.out.print("final exam\t");
-		newWeight[4] = Integer.parseInt(scanner.nextLine());
+		newWeight[4] = Integer.parseInt(scanner.next());
 		
 		str = "請確認新配分\n" + "lab1\t" + newWeight[0] + "%\n" + 
 				"lab2\t" + newWeight[1] + "%\n" +
@@ -125,7 +126,7 @@ public class GradeSystems {
 				"以上正確嗎? Y(Yes) 或 N(No)\n" + 
 				"使用者輸入：";
 		System.out.print(str);
-		String comString = scanner.nextLine();
+		String comString = scanner.next();
 		
 		if (comString.equals("Y")) {
 			int all = 0;
@@ -136,14 +137,11 @@ public class GradeSystems {
 				for (int i=0; i<5; i++) {
 					weights[i] = newWeight[i] / 100.0f;
 				}
+			}else {
+				System.out.print("配分比例合計需要100%, 請檢查\n");
 			}
-			else {
-				System.out.println("配分比例合計需要100%, 請檢查");
-			}
-		} 
-		for (int i = 0; i<5; i++) {  
-			weights[i] = newWeight[i] / 100.0f;
 		}
+		
 		Iterator<String> anEntry = aTree.keySet().iterator(); 
 		while (anEntry.hasNext()) {  
 			aTree.get(anEntry.next()).calculateTotalGrade(weights);
