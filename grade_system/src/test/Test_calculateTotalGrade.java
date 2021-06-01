@@ -14,7 +14,7 @@ import SourceCodeFiles.*;
 
 public class Test_calculateTotalGrade {
 
-	private GradeSystems aGradeSystem;
+	GradeSystems aGradeSystem = new GradeSystems(); 
 	float[] testWeights1 = {0.1f, 0.1f, 0.1f, 0.3f, 0.4f};
 	float[] testWeights2 = {0.2f, 0.2f, 0.2f, 0.2f, 0.2f};
 	float[] testWeights3 = {0.1f, 0.1f, 0.0f, 0.4f, 0.4f};
