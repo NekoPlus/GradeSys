@@ -137,8 +137,7 @@ public class GradeSystems {
 				for (int i=0; i<5; i++) {
 					weights[i] = newWeight[i] / 100.0f;
 				}
-			}
-			else {
+			}else {
 				System.out.println("配分比例合計需要100%, 請檢查");
 			}
 		}
